@@ -3,8 +3,8 @@ import {Request, Response, NextFunction} from 'express';
 import User from '../models/Users'
 //concurrency issues, figure out how to get info through req
 
-const CLIENT_URL = 'http://localhost:3000/'
-const CLIENT_URL_newUser = 'http://localhost:3000/new-user'
+const CLIENT_URL = 'https://devhunt.app'
+const CLIENT_URL_newUser = 'https://devhunt.app/new-user'
 
 declare global {
   namespace Express {

@@ -115,7 +115,7 @@ app.post('/editWithPicture', upload.single('file'), async (req, res) => {
         });
     }
     else {
-        res.redirect('http://localhost:4000/editNoPicture')
+        res.redirect('http://devhunt-server-e141054a4ce8.herokuapp/editNoPicture')
     }
 })
 
