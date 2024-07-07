@@ -166,7 +166,7 @@ app.post('/editProfile', upload.single('file'), (req, res) => __awaiter(void 0, 
         }));
     }
 }));
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 80;
 mongoose_1.default.connect(process.env.DSN || '')
     .then(() => app.listen(PORT, () => console.log(`Server running on port: ${PORT}`)))
     .catch((error) => console.error(error.message));

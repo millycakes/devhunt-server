@@ -1,10 +1,14 @@
 import admin from 'firebase-admin';
 
-const serviceAccount =  require('../devhunt-2863a-firebase-adminsdk-5s7gw-379a387164.json');
+const serviceAccount =  JSON.parse(
+  process.env.FIREBASE_SERVICE_ACCOUNT_KEY as string
+);
 
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  storageBucket: 'devhunt-2863a.appspot.com'
-});
+if (admin.apps.length === 0) {
+  admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    storageBucket: "devhunt-2863a.appspot.com",
+  });
+}
 
 export const bucket = admin.storage().bucket();
