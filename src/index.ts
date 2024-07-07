@@ -47,6 +47,10 @@ import User from './models/Users';
 
 const upload = multer({ storage: multer.memoryStorage() });
 
+app.get('/', (req,res) => {
+    console.log("home")
+})
+
 app.post('/upload', upload.single('file'), async (req, res) => {
     console.log(req.body);
     if (req.file) {
