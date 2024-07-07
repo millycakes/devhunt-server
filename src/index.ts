@@ -33,7 +33,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session())
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://devhunt-server-e141054a4ce8.herokuapp.com/',
     credentials: true,
     methods: 'GET,POST,PUT,DELETE',
 }))
