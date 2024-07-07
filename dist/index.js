@@ -39,7 +39,7 @@ app.use(cookieSession({
 app.use(passport_1.default.initialize());
 app.use(passport_1.default.session());
 app.use((0, cors_1.default)({
-    origin: 'https://devhunt-server-e141054a4ce8.herokuapp.com/',
+    origin: 'https://devhunt-client-564fb3b4c40a.herokuapp.com/',
     credentials: true,
     methods: 'GET,POST,PUT,DELETE',
 }));
