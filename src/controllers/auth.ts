@@ -27,20 +27,23 @@ export const signInSuccess = async (req: Request, res: Response) => {
                 });
             }
             const user = userDocument.toObject();
+            console.log("user found")
             res.status(200).json({
                 success: true,
                 message: 'Successful',
                 user: user,
                 cookies: req.cookies,
             });
+            console.log("this line should never run")
         } catch (error) {
-            console.error(error);
+            console.log(error);
             res.status(500).json({
                 success: false,
                 message: 'An error occurred while fetching user data',
             });
         }
     } else {
+        console.log("no user info")
         res.status(400).json({
             success: false,
             message: 'No user information available',
