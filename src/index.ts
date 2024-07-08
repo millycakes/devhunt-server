@@ -16,8 +16,12 @@ import { getDownloadURL } from 'firebase-admin/storage';
 
 
 import { Request, Response } from 'express';
+import { HTTPS } from 'express-sslify';
 
 const app = express();
+
+app.use(HTTPS({ trustProtoHeader: true }));
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static('public'))
 app.use(express.json());
