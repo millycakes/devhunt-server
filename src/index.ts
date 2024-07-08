@@ -33,6 +33,7 @@ app.use(
 		name: 'session',
 		keys: ['devhunt'],
 		maxAge: 30 * 24 * 60 * 60 * 100,
+        sameSite: 'none'
 	})
 );
 app.use(passport.initialize());
