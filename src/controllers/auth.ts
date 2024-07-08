@@ -15,10 +15,12 @@ declare global {
 }
 
 export const signInSuccess = async (req: Request, res: Response) => {
+    console.log("here")
     if (req.user) {
         try {
             const userDocument = await User.findById(req.user._id);
             if (!userDocument) {
+                console.log("user not found")
                 return res.status(404).json({
                     success: false,
                     message: 'User not found',
