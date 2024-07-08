@@ -20,6 +20,7 @@ import { HTTPS } from 'express-sslify';
 
 const app = express();
 
+app.set('trust proxy', 1);
 app.use(HTTPS({ trustProtoHeader: true }));
 
 app.use(express.static(path.join(__dirname, 'public')));
