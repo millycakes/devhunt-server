@@ -3,8 +3,8 @@ import {Request, Response, NextFunction} from 'express';
 import User from '../models/Users'
 //concurrency issues, figure out how to get info through req
 
-const CLIENT_URL = 'https://devhunt.app'
-const CLIENT_URL_newUser = 'https://devhunt.app/new-user'
+const CLIENT_URL = 'https://devhunt-client-564fb3b4c40a.herokuapp.com/'
+const CLIENT_URL_newUser = 'https://devhunt-client-564fb3b4c40a.herokuapp.com/new-user'
 
 declare global {
   namespace Express {
