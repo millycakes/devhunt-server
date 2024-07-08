@@ -15,7 +15,9 @@ export const getPosts = async (req: Request, res: Response): Promise<void> => {
 }
 
 export const getPostById = async (req: Request, res: Response): Promise<void> => {
+    console.log("made it here?")
     const postId = req.params.post;
+    console.log(postId)
     try {
         const updatedPost = await Post.findOneAndUpdate( 
             {_id: postId}, 
@@ -25,6 +27,7 @@ export const getPostById = async (req: Request, res: Response): Promise<void> =>
         console.log("successfully viewed post")
         res.status(200).json(updatedPost);
     } catch (error: any) {
+        console.log(error)
         res.status(500).json({message: error.message})
     }
 }
